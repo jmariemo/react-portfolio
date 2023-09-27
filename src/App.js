@@ -3,7 +3,7 @@ import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("About");
@@ -21,13 +21,13 @@ function App() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <div>
+    <div className="bg-cityscape">
       <Header
         currentPage={currentPage}
         handlePageChange={handlePageChange}
       />
       {renderPage()}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
