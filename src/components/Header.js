@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 
 function Header({ currentPage, handlePageChange }) {
   return (
-    <header className="bg-rosado sticky top-0 z-10 font-serif">
+    <header className="bg-rosado sticky top-0 z-20 font-serif">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a
           href="#about"

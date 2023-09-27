@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 function Contact() {
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -26,8 +25,8 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className="relative p-4">
-      <div className="container mb-6 mt-auto flex sm:flex-nowrap flex-wrap font-serif">
+    <section id="contact" className="relative">
+      <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap font-serif">
         <div className="md:w-1/2 bg-gray-100 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative shadow-md">
           <iframe
             width="100%"
@@ -37,24 +36,15 @@ function Contact() {
             style={{ filter: "opacity(0.7)" }}
             src="https://www.google.com/maps/embed/v1/place?q=North+Beach,+San+Francisco,+CA,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
           />
-          <div className="bg-gray-600 relative flex flex-wrap py-6 rounded shadow-lg">
-            <div className="lg:w-1/2 px-2 lg:mt-0">
-              <h2 className="title-font font-semibold text-rosado tracking-widest text-xs">
-                ADDRESS
-              </h2>
-              <p className="mt-1 text-white">San Francisco, CA</p>
-            </div>
-            <div className="lg:w-1/2 px-2 mt-4 lg:mt-0">
+          <div className="bg-teal-800 relative flex flex-col flex-wrap py-6 rounded shadow-lg">
+
+            <div className="lg:w-1/2 px-6 mt-4 lg:mt-1">
               <h2 className="title-font font-semibold text-rosado tracking-widest text-xs">
                 EMAIL
               </h2>
-              <p className="text-white mr-4">
+              <p className="text-white mr-4 leading-relaxed">
                 rosjenniferm@gmail.com
               </p>
-              <h2 className="title-font font-semibold text-rosado tracking-widest text-xs mt-4">
-                PHONE
-              </h2>
-              <p className="mr-2 text-white">415-867-5309</p>
             </div>
           </div>
         </div>
@@ -62,13 +52,16 @@ function Contact() {
           netlify
           name="contact"
           onSubmit={handleSubmit}
-          className="flex flex-col bg-white rounded shadow-lg md:ml-auto w-full p-3 md:p-8 mt-8 md:mt-0 lg:w-1/3 md:w-1/2"
+          className="flex flex-col bg-gradient-to-b from-white to-white/70 rounded shadow-lg md:ml-auto w-full p-3 md:p-8 mt-8 md:mt-0 lg:w-1/3 md:w-1/2"
         >
-          <p className="text-center text-teal-950 leading-relaxed p-3 mb-2">
-            Share your ideas with me below.
+          <p className="text-center rounded text-teal-800 leading-relaxed p-3 mb-2">
+            Connect With Me
           </p>
           <div className="relative mb-2">
-            <label htmlFor="name" className="bg-white rounded p-2 mb-2 leading-7 text-sm">
+            <label
+              htmlFor="name"
+              className="rounded p-2 mb-2 leading-7 text-sm"
+            >
               Name
             </label>
             <input
@@ -80,7 +73,10 @@ function Contact() {
             />
           </div>
           <div className="relative mb-2">
-            <label htmlFor="email" className="bg-white rounded p-2 mb-2 leading-7 text-sm">
+            <label
+              htmlFor="email"
+              className="rounded p-2 mb-2 leading-7 text-sm"
+            >
               Email
             </label>
             <input
@@ -94,9 +90,9 @@ function Contact() {
           <div className="relative mb-2">
             <label
               htmlFor="message"
-              className="bg-white rounded p-2 mb-2 leading-7 text-sm"
+              className="rounded p-2 mb-2 leading-7 text-sm"
             >
-              How can I help you?
+              Let's hear your ideas!
             </label>
             <textarea
               id="message"
@@ -107,7 +103,7 @@ function Contact() {
           </div>
           <button
             type="submit"
-            className="text-white bg-gray-600 border py-2 px-6 hover:bg-gray-700 rounded text-lg shadow-md"
+            className="text-white bg-teal-800 border py-2 px-6 hover:bg-gray-700 rounded text-lg shadow-md"
           >
             Submit
           </button>
